@@ -1,1 +1,79 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>360° Video Gallery</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 2rem;
+      background: #f5f5f5;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .video-item {
+      background: white;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+
+    .video-item img {
+      width: 100%;
+      display: block;
+    }
+
+    .video-item a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .caption {
+      padding: 0.75rem;
+      font-weight: bold;
+    }
+  </style>
+</head>
+
+<body>
+
+<h1>360° Video Gallery</h1>
+
+<div class="gallery">
+
+  <!-- VIDEO 1 -->
+  <div class="video-item">
+    https://www.youtube.com/watch?v=VIDEO_ID_1
+      https://img.youtube.com/vi/VIDEO_ID_1/hqdefault.jpg
+      <div class="caption">Historic Building Interior</div>
+    </a>
+  </div>
+
+  <!-- VIDEO 2 -->
+  <div class="video-item">
+    https://www.youtube.com/watch?v=VIDEO_ID_2
+      https://img.youtube.com/vi/VIDEO_ID_2/hqdefault.jpg
+      <div class="caption">University Library Tour</div>
+    </a>
+  </div>
+
+</div>
+
+</body>
+</html>
+
