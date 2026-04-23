@@ -74,6 +74,33 @@
     padding: 0.75rem;
     font-weight: bold;
   }
+
+
+.video-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  width: 100%;
+}
+
+.video-grid iframe {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border: none;
+}
+
+/* Responsive scaling */
+@media (max-width: 1000px) {
+  .video-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .video-grid {
+    grid-template-columns: 1fr;
+  }
+} 
 </style>
 
 </head>
@@ -102,8 +129,6 @@
   
 <div class="video-grid">
 <iframe
-  width="20%"
-  height="250"
   src="https://www.youtube.com/embed/bXR9EEmb-JU"
   title="Bruegel: a fall with the Rebel Angels"
   frameborder="0"
@@ -112,8 +137,6 @@
 </iframe>
 
 <iframe
-  width="20%"
-  height="250"
   src="https://www.youtube.com/embed/JWErvj6Okm0"
   title="Fashioning the Future with British Icons"
   frameborder="0"
@@ -122,8 +145,6 @@
 </iframe>
 
 <iframe
-  width="20%"
-  height="250"
   src="https://www.youtube.com/embed/6Y4OTrsccvs"
   title="Journey into the HISTORY of CINEMA in 360 VR"
   frameborder="0"
