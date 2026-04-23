@@ -5,67 +5,77 @@
   <title>360° Video Gallery</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      background: #f5f5f5;
-      
-.site-header {
-  background: url("images/header-banner.jpg") center / cover no-repeat;
-  color: white;
-  padding: 4rem 2rem;
-  text-align: center;
-}
+ 
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background: #f5f5f5;
+  }
 
-.site-header h1 {
-  margin: 0;
-  font-size: 2.2rem;
-}
+  .site-header {
+    position: relative; /* REQUIRED for absolute logo positioning */
+    background: url("images/header-banner.jpg") center / cover no-repeat;
+    color: white;
+    padding: 4rem 2rem;
+    text-align: center;
+  }
 
-.site-header p {
-  max-width: 900px;
-  margin: 1rem auto 0;
-  font-size: 1.05rem;
-  line-height: 1.5;
-}
+  .site-header h1 {
+    margin: 0;
+    font-size: 2.2rem;
+  }
 
-    }
+  .site-header p {
+    max-width: 900px;
+    margin: 1rem auto 0;
+    font-size: 1.05rem;
+    line-height: 1.5;
+  }
 
-    h1 {
-      text-align: center;
-      margin-bottom: 2rem;
-    }
+  /* LOGO STYLING */
+  .header-logo {
+    position: absolute;
+    bottom: 15px;
+    right: 20px;
+    max-height: 60px;
+  }
 
-    .gallery {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 1.5rem;
-    }
+  h1 {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
 
-    .video-item {
-      background: white;
-      border-radius: 8px;
-      overflow: hidden;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-      text-align: center;
-    }
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+  }
 
-    .video-item img {
-      width: 320px;
-      display: block;
-    }
+  .video-item {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    text-align: center;
+  }
 
-    .video-item a {
-      text-decoration: none;
-      color: inherit;
-    }
+  .video-item img {
+    width: 320px;
+    display: block;
+  }
 
-    .caption {
-      padding: 0.75rem;
-      font-weight: bold;
-    }
-  </style>
+  .video-item a {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .caption {
+    padding: 0.75rem;
+    font-weight: bold;
+  }
+</style>
+
 </head>
 
 <body>
@@ -73,8 +83,12 @@
 <header class="site-header">
   <h1>CCN Library 360° VR Video Gallery</h1>
   <p>To watch these videos in 360VR: Select the video you would like to watch and put it into full screen mode. Then, select the cube icon on the mini Pico toolbar that will appear at the bottom, and select 360VR.</p>
-</header>
 
+<!-- LOGO -->
+<img src="images/logo.png" alt="CCN Library Logo" class="header-logo">
+</header>
+``
+  
 <main>
   <div class="gallery">
     <!-- videos -->
