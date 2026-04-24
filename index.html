@@ -124,6 +124,28 @@
 }
 ``
 
+/* Footer logo styling */
+.footer-logo {
+  position: absolute;
+  right: 1rem;
+  bottom: 1rem;
+
+  max-width: 120px;
+  height: auto;
+
+  opacity: 0.9;
+}
+``
+  
+@media (max-width: 600px) {
+  .footer-logo {
+    position: static;
+    display: block;
+    margin: 1.5rem auto 0 auto;
+  }
+}
+``
+  
 .site-footer a:hover {
   text-decoration: underline;
 }
@@ -467,9 +489,12 @@
     <a href="mailto:libhelp@ccn.ac.uk">libhelp@ccn.ac.uk</a>
   </p>
 
-  <p>
-    <a href="https://github.com/yourusername">GitHub</a>
-  </p>
+  <!-- Footer logo -->
+  <img 
+    src="images/logo.png" 
+    alt="Library logo"
+    class="footer-logo">
+ 
 </footer>
 
 
