@@ -105,37 +105,35 @@
 /* ===== FOOTER STYLING ===== */
 .site-footer {
   margin-top: 4rem;
-  padding: 1.5rem 1rem;
-  padding-bottom: 3.5rem;
-  
-  /* Background image */
+  padding: 1.5rem 1rem 3.5rem;
+
+  min-height: 140px;
+  overflow: hidden;
+
   background-image: url("images/footer-bg.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 
-  /* Text styling */
   text-align: center;
   font-size: clamp(0.85rem, 1.2vw, 1rem);
   color: #333333;
   font-weight: 600;
 
-  /* Optional overlay for readability */
   position: relative;
 }
 
-/* Footer logo styling */
+/* Footer logo */
 .footer-logo {
   position: absolute;
-  right: 20rem;
-  bottom: 15rem;
+  right: 20px;
+  bottom: 15px;
 
-  max-height: 60px;
+  height: 60px;
   width: auto;
 
   opacity: 0.9;
 }
-``
   
 .site-footer a:hover {
   text-decoration: underline;
