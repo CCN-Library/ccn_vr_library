@@ -60,20 +60,18 @@
     text-align: center;
   }
 
-.video-item img {
-  width: 100%;
-  height: auto;
-  display: block;
-}
+/* ===== Thumbnail video cards ===== */
 
-/* Make thumbnails match video aspect ratio */
 .video-item a {
   display: block;
   aspect-ratio: 16 / 9;
   position: relative;
   overflow: hidden;
+  text-decoration: none;
+  color: white;
 }
 
+/* Thumbnail image fills the video frame */
 .video-item img {
   width: 100%;
   height: 100%;
@@ -81,10 +79,28 @@
   display: block;
 }
 
-  .video-item a {
-    text-decoration: none;
-    color: inherit;
-  }
+/* Title overlay on thumbnail */
+.video-title {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+
+  padding: 0.75rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  line-height: 1.3;
+
+  background: linear-gradient(
+    transparent,
+    rgba(0, 0, 0, 0.8)
+  );
+}
+
+/* Optional hover effect */
+.video-item a:hover .video-title {
+  background: rgba(0, 0, 0, 0.9);
+}
 
   .caption {
     padding: 0.75rem;
