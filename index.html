@@ -60,10 +60,23 @@
     text-align: center;
   }
 
-  .video-item img {
-    width: 320px;
-    display: block;
-  }
+.video-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Make thumbnails match video aspect ratio */
+.video-item a {
+  display: block;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+}
+
+.video-item img {
+  object-fit: cover;
+}
+
 
   .video-item a {
     text-decoration: none;
