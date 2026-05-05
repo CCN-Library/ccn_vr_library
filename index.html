@@ -52,24 +52,34 @@
     gap: 1.5rem;
   }
 
-
-/* ===== Featured videos layout ===== */
+/* ===== Featured videos layout (WORKING VERSION) ===== */
 
 .gallery.featured-grid {
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(6, 1fr);
 }
 
+/* Featured videos take 2 columns each */
 .gallery.featured-grid .video-item.featured {
+  grid-column: span 2;
+}
+
+/* Regular videos take 1 column */
+.gallery.featured-grid .video-item:not(.featured) {
   grid-column: span 1;
 }
 
-/* Responsive behaviour */
+/* Tablet */
 @media (max-width: 1000px) {
   .gallery.featured-grid {
     grid-template-columns: repeat(2, 1fr);
   }
+
+  .gallery.featured-grid .video-item {
+    grid-column: span 1;
+  }
 }
 
+/* Mobile */
 @media (max-width: 600px) {
   .gallery.featured-grid {
     grid-template-columns: 1fr;
