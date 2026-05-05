@@ -51,7 +51,26 @@
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 1.5rem;
   }
- 
+
+/* ===== Nature & Travel column limit ===== */
+.nature-travel .gallery {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+/* Tablet */
+@media (max-width: 900px) {
+  .nature-travel .gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .nature-travel .gallery {
+    grid-template-columns: 1fr;
+  }
+}
+  
   .video-item {
     background: white;
     border-radius: 8px;
@@ -359,7 +378,7 @@
   </div>
 </section>
 
-<section>
+<section class="nature-travel">
   <h2>Nature and Travel</h2>
 
   <!-- Row 1 -->
