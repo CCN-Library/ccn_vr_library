@@ -52,6 +52,30 @@
     gap: 1.5rem;
   }
 
+
+/* ===== Featured videos layout ===== */
+
+.gallery.featured-grid {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.gallery.featured-grid .video-item.featured {
+  grid-column: span 1;
+}
+
+/* Responsive behaviour */
+@media (max-width: 1000px) {
+  .gallery.featured-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .gallery.featured-grid {
+    grid-template-columns: 1fr;
+  }
+}
+  
   .video-item {
     background: white;
     border-radius: 8px;
@@ -362,9 +386,9 @@
 <section>
   <h2>Nature and Travel</h2>
 
-  <div class="gallery">
+  <div class="gallery featured-grid">
 
-    <div class="video-item">
+    <div class="video-item featured">
       <a href="videos/lions.html">
         <img src="thumbnails/lions.jpg" alt="Lions 360° | National Geographic">
         <span class="video-title">Lions 360° | National Geographic</span>
@@ -373,7 +397,7 @@
       <div class="caption">Lions 360° | National Geographic</div>
     </div>
 
-    <div class="video-item">
+    <div class="video-item featured">
       <a href="videos/elephants.html">
         <img src="thumbnails/elephants.jpg" alt="Elephants on the Brink">
         <span class="video-title">Elephants on the Brink</span>
@@ -382,7 +406,7 @@
       <div class="caption">Elephants on the Brink</div>
     </div>
 
-    <div class="video-item">
+    <div class="video-item featured">
       <a href="videos/freesolo.html">
         <img src="thumbnails/freesolo.jpg" alt="Free Solo 360 | National Geographic">
         <span class="video-title">Free Solo 360 | National Geographic</span>
